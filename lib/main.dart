@@ -4,6 +4,25 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'model/counter_model.dart';
 
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      title: 'Flutter MVP Demo',
+      debugShowCheckedModeBanner: false,
+      theme: new ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home:
+          new HomePage(new BasicCounterPresenter(), title: 'Flutter MVP Demo'),
+    );
+  }
+}
+
 class HomePage extends StatefulWidget {
   final CounterPrecenter presenter;
 
